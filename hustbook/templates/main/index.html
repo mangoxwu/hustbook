@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../static/css/style.css">
     <title>hustbook</title>
@@ -17,33 +17,56 @@
 <body>
 <header>
     <nav>
-        <div class="heading">
-            <a href="#">
-                <h1>hustbook</h1>
-            </a>
-            <form>
-                <i class="fa fa-search"></i>
-            </form>
-            <a>
-                <div class="dropdown">
-                    <a href="#" class="drowitem">Profile</a>
-                    <a href="#" class="drowitem">Log Out</a>
-                </div>
-            </a>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
+        <ul class="header-item header-left menu" >
+            <li><a href="#"><i class="fa fa-home fa-fw fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa fa-bell-o fa-fw fa-lg"></i></a></li>
+        </ul>
+        <a href="#" class="header-item header-center logo">hustbook</a>
+        <div class="header-right">
+            <div class="header-item search-box">
+                <input class="search-txt" type="text" name="" placeholder="Type to search...">
+                <a class="search-btn" href="#" >
+                    <i class="fa fa-search fa-lg"></i>
+                </a>
+            </div>
+            <a href="#" class="header-item login-btn">Sign in</a>
         </div>
     </nav>
 </header>
 <main>
+    <div class="content">
+        <ul class="post-list">
+            <li class="post-item">
+                <a href="#"><h2 class="post-title">PHP面向对象(二)</h2></a>
+                <p class="abstract">本篇文章主要介绍的是SpringBoot整合Swagger(API文档生成框架)和SpringBoot整合Actuator(项目监控)使用教程。 SpringBoot整合Swagger 说明：如果想直接获取工程那么可以直接跳到底部，通过链接下载工程代码。 Swagger 介绍 Swagger ...</p>
+                <span class="author">花凝冰</span>
+                <time class="date"> 2019-06-17 22:54</time>
+            </li>
+            <li class="post-item">
+                <a href="#"><h2 class="post-title">PHP面向对象(二)</h2></a>
+                <p class="abstract">本篇文章主要介绍的是SpringBoot整合Swagger(API文档生成框架)和SpringBoot整合Actuator(项目监控)使用教程。 SpringBoot整合Swagger 说明：如果想直接获取工程那么可以直接跳到底部，通过链接下载工程代码。 Swagger 介绍 Swagger ...</p>
+                <span class="author">花凝冰</span>
+                <time class="date"> 2019-06-17 22:54</time>
+            </li>
+            <li class="post-item">
+                <a href="#"><h2 class="post-title">PHP面向对象(二)</h2></a>
+                <p class="abstract">本篇文章主要介绍的是SpringBoot整合Swagger(API文档生成框架)和SpringBoot整合Actuator(项目监控)使用教程。 SpringBoot整合Swagger 说明：如果想直接获取工程那么可以直接跳到底部，通过链接下载工程代码。 Swagger 介绍 Swagger ...</p>
+                <span class="author">花凝冰</span>
+                <time class="date"> 2019-06-17 22:54</time>
+            </li>
+            <li class="post-item">
+                <a href="#"><h2 class="post-title">PHP面向对象(二)</h2></a>
+                <p class="abstract">本篇文章主要介绍的是SpringBoot整合Swagger(API文档生成框架)和SpringBoot整合Actuator(项目监控)使用教程。 SpringBoot整合Swagger 说明：如果想直接获取工程那么可以直接跳到底部，通过链接下载工程代码。 Swagger 介绍 Swagger ...</p>
+                <span class="author">花凝冰</span>
+                <time class="date"> 2019-06-17 22:54</time>
+            </li>
+        </ul>
+        <div class="extra" style="height: 100px; background: white">a</div>
+    </div>
 </main>
 <footer></footer>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 </body>
 </html>
