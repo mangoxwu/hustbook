@@ -10,7 +10,7 @@ auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/login')
 def login():
-    pass
+    return "hello world"
 
 @auth_bp.route('/logout')
 def logout():
