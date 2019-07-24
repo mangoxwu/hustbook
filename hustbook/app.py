@@ -1,13 +1,13 @@
 '''
 @Description: 
-@Author: wu xie
-@Github: https://github.com/mangoxwu
-@Date: 2019-06-12 21:32:01
+@Author: Wu Xie
+@Github: https://github.com/shiehng
+@Date: 2019-07-23 23:38:46
 '''
-from flask import Flask, render_template
+from flask import Flask
+
+from hustbook.blueprints.auth import auth_bp
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("main/index.html")
+app.register_blueprint(auth_bp, url_prefix='/auth')
