@@ -8,6 +8,8 @@ from datetime import datetime
 
 from hustbook.extensions import db
 
+from werkzeug.security import generate_password_hash
+
 class Admin(db.Model):
     # 管理员模型
     id = db.Column(db.Integer, primary_key=True)
@@ -17,6 +19,9 @@ class Admin(db.Model):
     blog_sub_title = db.Column(db.String(100))
     name = db.Column(db.String(30))
     about = db.Column(db.Text)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
 
 class Category(db.Model):
     # 分类模型
@@ -32,7 +37,7 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     category = db.relationship('Category', back_populates='posts')
-    comments = db.relationship('Comment', backref='post', cascade='all')
+    comments = db.relationship('Comment', back_populates='post', cascade='all, delete-orphan')
 
 class Comment(db.Model):
     # 评论模型
