@@ -13,6 +13,8 @@ from hustbook.blueprints.auth import auth_bp
 from hustbook.blueprints.admin import admin_bp
 from hustbook.blueprints.blog import blog_bp
 
+from hustbook.models import Admin, Category
+
 from hustbook.settings import config
 
 from hustbook.extensions import bootstrap, db, moment, ckeditor, mail
@@ -55,7 +57,12 @@ def register_shell_context(app):
         return dict(db=db)
 
 def register_template_context(app):
-    pass
+    @app.context_processor
+    def make_template_context():
+        admin = Admin.query.first()
+        categories = Category.query.order_by(Category.name).all()
+        return dict(admin=admin, categories=categories)
+
 
 def register_errors(app):
     @app.errorhandler(400)
